@@ -39,6 +39,6 @@ steps:
 #- bash: echo pipeline.startTime
 #- bash: echo $(form)
 #- script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
-'''
+
 #- download: current
 #  artifact: WebApp
