@@ -6,11 +6,21 @@
 trigger:
 - master
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 pool:
   vmImage: 'ubuntu-latest'
 strategy:
   matrix:
     Python27:
       python.version: '2.7'
-steps:
-  - script: echo Hello Stage A!
+stages:
+- stage: A
+  jobs:
+  - job: A1
+  - job: A2
