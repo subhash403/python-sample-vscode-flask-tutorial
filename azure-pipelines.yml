@@ -22,6 +22,7 @@ variables:
 steps:
 - bash: echo $(minor)
 - bash: echo $(a)
+- bash: echo $(pipeline.startTime)
 
 #- download: current
 #  artifact: WebApp
