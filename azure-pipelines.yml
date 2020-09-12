@@ -33,7 +33,7 @@ parameters:
   - macOS-latest
   - macOS-10.14
 steps:
- - bash: echo $(Build)
+ - bash: echo $(Build.BuildNumber)
 #- bash: echo $(minor)
 #- bash: echo $(a)
 #- bash: echo pipeline.startTime
