@@ -30,8 +30,6 @@ steps:
   displayName: 'pytest'
 variables:
   isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
-
-stages:
 - stage: A
   jobs:
   - job: A1
