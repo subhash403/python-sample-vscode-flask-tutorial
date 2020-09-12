@@ -12,9 +12,5 @@ strategy:
   matrix:
     Python27:
       python.version: '2.7'
-stages:
-- stage: A
-  jobs:
-  - job: A1
-    steps:
-      - script: echo Hello Stage A!
+steps:
+  - script: echo Hello Stage A!
