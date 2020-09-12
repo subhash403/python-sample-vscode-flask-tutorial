@@ -18,7 +18,7 @@ variables:
   # define minor as a counter with the prefix as variable major, and seed as 100.
   minor: $[counter(variables['major'], 100)]
   a: $[counter(format('{0:yyyyMMdd}', pipeline.startTime), 100)]
-  form: $[format('Hello {0} {1}', 'John', 'Doe')]
+  form: $[format('Hello {1} {0}', 'John', 'Doe')]
 
 steps:
 - bash: echo $(minor)
